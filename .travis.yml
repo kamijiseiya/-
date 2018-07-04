@@ -5,14 +5,12 @@ python:
   - 3.4
   - 3.5
   - 3.6.5
+before_install:
+ - openssl aes-256-cbc -K $encrypted_8e63aafd52f0_key -iv $encrypted_8e63aafd52f0_iv -in test_exchanges.py.enc -out test_exchanges.py -
 install:
   - pip install tox tox-travis
   - pip install coverage coveralls
   - pip install ccxt
-ibefore_install:
-  - ls 
-  - openssl aes-256-cbc -K $encrypted_8e63aafd52f0_key -iv $encrypted_8e63aafd52f0_iv -in test_exchanges.py.enc -out test_exchanges.py -d
-  - tar xvf secrets.tar
 
 script:
   - ls
