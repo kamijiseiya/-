@@ -17,6 +17,7 @@ ibefore_install:
 script:
   - ls
   - cd test
+  - ls
   - python --version
   - python sample_a.py
   - python -m unittest
