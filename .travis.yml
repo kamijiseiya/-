@@ -6,6 +6,9 @@ python:
   - 3.5
   - 3.6.5
 before_install:
+ - ls
+ - cd test
+ - ls
  - openssl aes-256-cbc -K $encrypted_8e63aafd52f0_key -iv $encrypted_8e63aafd52f0_iv -in test_exchanges.py.enc -out test_exchanges.py -
 install:
   - pip install tox tox-travis
